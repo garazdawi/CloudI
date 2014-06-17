@@ -1370,7 +1370,7 @@ timeout_sync(Dispatcher) ->
 %%-------------------------------------------------------------------------
 
 -spec request_http_qs_parse(Request :: binary()) ->
-    Result :: dict().
+    Result :: dict:dict().
 
 request_http_qs_parse(Request)
     when is_binary(Request) ->
@@ -1386,7 +1386,7 @@ request_http_qs_parse(Request)
 %%-------------------------------------------------------------------------
 
 -spec request_info_key_value_parse(RequestInfo :: binary() | list()) ->
-    Result :: dict().
+    Result :: dict:dict().
 
 request_info_key_value_parse(RequestInfo)
     when is_list(RequestInfo) ->

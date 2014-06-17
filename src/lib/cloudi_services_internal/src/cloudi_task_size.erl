@@ -67,7 +67,7 @@
 %% @end
 %%-------------------------------------------------------------------------
 
--spec new() -> dict().
+-spec new() -> dict:dict().
 
 new() ->
     dict:new().
@@ -80,7 +80,7 @@ new() ->
 
 -spec get(TaskSize :: float(),
           Pid :: pid(),
-          State :: dict()) -> float().
+          State :: dict:dict()) -> float().
 
 get(TaskSize, Pid, State)
     when is_pid(Pid) ->
@@ -102,7 +102,7 @@ get(TaskSize, Pid, State)
           TargetTime :: float(),
           ElapsedTime :: float(),
           Pid :: pid(),
-          State :: dict()) -> dict().
+          State :: dict:dict()) -> dict:dict().
 
 put(TaskSize, TargetTime, ElapsedTime, Pid, State)
     when is_float(TaskSize), is_float(TargetTime), is_float(ElapsedTime),
