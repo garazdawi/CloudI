@@ -194,7 +194,7 @@ AC_DEFUN([AX_ERLANG_REQUIRE_OTP_VER],
                                     Major ++ ".0.0"
                             end
                     end,
-                    [[_, Minor | RCString]] = string:tokens(Package, ".-"),
+                    [[_, Minor | RCString]] = string:tokens(Package, ".-*"),
                     {Patch, RC} = case RCString of
                         [["rc" ++ RCStr]] ->
                             {"0", RCStr};
